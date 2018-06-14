@@ -6,9 +6,11 @@ import re
 import os
 import ConfigParser
 
-def test_crs(ruleset, test, logchecker_obj):
+def test_crs(ruleset, test, logchecker_obj, destaddr):
     runner = testrunner.TestRunner()
     for stage in test.stages:
+        if destaddr is not None:
+            stage.input.dest_addr = destaddr
         runner.run_stage(stage, logchecker_obj)
         
 class FooLogChecker(logchecker.LogChecker):
