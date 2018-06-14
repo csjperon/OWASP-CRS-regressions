@@ -1,6 +1,4 @@
-=====================
-OWASP-CRS-regressions
-=====================
+# OWASP-CRS-regressions
 
 Introduction
 ============
